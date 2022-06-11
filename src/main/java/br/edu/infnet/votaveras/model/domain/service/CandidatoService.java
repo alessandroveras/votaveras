@@ -30,5 +30,9 @@ public class CandidatoService {
 	public List<Candidato> obterLista(Eleicao eleicao) {
 		return (List<Candidato>) candidatoRepository.findAll();
 	}
+	
+	public Candidato obterPorId(Integer id) {
+		return candidatoRepository.findById(id).orElse(null);
+	}
 
 }

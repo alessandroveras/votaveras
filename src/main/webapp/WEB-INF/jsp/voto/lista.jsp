@@ -25,8 +25,8 @@
 	  </form>
 	  
 	  <hr>
-	<c:if test="${not empty lista}">		
-		<h2>Total de Votos: ${lista.size()}</h2>
+	<c:if test="${not empty votos}">		
+		<h2>Total de Votos: ${votos.size()}</h2>
 		  
 		<table class="table table-striped">
 		    <thead>
@@ -37,7 +37,7 @@
 		      </tr>
 		    </thead>
 		    <tbody>
-		      <c:forEach var="voto" items="${lista}">
+		      <c:forEach var="voto" items="${votos}">
 			      <tr>
 			        <td>${voto.data}</td>
 			        <td>${voto.localizacao}</td>
@@ -48,7 +48,7 @@
 	  	</table>
     </c:if>	  	  
 
-	<c:if test="${empty lista}">		
+	<c:if test="${empty votos}">		
 	  <h2>Não existem votos cadastrados!!!</h2>
 	</c:if>
 

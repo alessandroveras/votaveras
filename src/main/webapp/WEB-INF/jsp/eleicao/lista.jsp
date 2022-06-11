@@ -36,6 +36,8 @@
 						<th>ID</th>
 						<th>Data</th>
 						<th>Descricao</th>
+						<th>Candidatos</th>
+						<th>Votos</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -44,6 +46,8 @@
 							<td>${eleicao.id}</td>
 							<td>${eleicao.data}</td>
 							<td>${eleicao.descricao}</td>
+							<td>${eleicao.candidatos.size()}</td>
+							<td>${eleicao.votos.size()}</td>
 							<td><a href="/eleicao/${eleicao.id}/excluir">excluir</a></td>
 						</tr>
 					</c:forEach>

@@ -25,8 +25,8 @@
 	  </form>
 	  
 	  <hr>
-	<c:if test="${not empty lista}">		
-		<h2>Total de Candidatos: ${lista.size()}</h2>
+	<c:if test="${not empty candidatos}">		
+		<h2>Total de Candidatos: ${candidatos.size()}</h2>
 		  
 		<table class="table table-striped">
 		    <thead>
@@ -34,14 +34,16 @@
 		        <th>ID</th>
 		        <th>Numero</th>
 		        <th>Nome</th>
+		        <th>Votos</th>
 		      </tr>
 		    </thead>
 		    <tbody>
-		      <c:forEach var="candidato" items="${lista}">
+		      <c:forEach var="candidato" items="${candidatos}">
 			      <tr>
 			        <td>${candidato.id}</td>
 			        <td>${candidato.numero}</td>
 			        <td>${candidato.nome}</td>
+			        <td>${candidato.votos.size()}</td>
 		        	<td><a href="/candidato/${candidato.id}/excluir">excluir</a></td>
 			      </tr>
 		      </c:forEach>		      
@@ -49,7 +51,7 @@
 	  	</table>
     </c:if>	  	  
 
-	<c:if test="${empty lista}">		
+	<c:if test="${empty candidatos}">		
 	  <h2>Não existem candidatos cadastrados!!!</h2>
 	</c:if>
 

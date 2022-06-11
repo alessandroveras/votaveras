@@ -36,6 +36,7 @@
 		        <th>Email</th>
 		        <th>Telefone</th>
 		        <th>Token</th>
+		        <th>Votos</th>
 		        <th></th>
 		      </tr>
 		    </thead>
@@ -47,6 +48,7 @@
 			        <td>${eleitor.email}</td>
 			        <td>${eleitor.telefone}</td>
 			        <td>${eleitor.token}</td>
+			        <td>${eleitor.votos.size()}</td>
 		        	<td><a href="/eleitor/${eleitor.id}/excluir">Excluir</a></td>
 			      </tr>
 		      </c:forEach>		      
