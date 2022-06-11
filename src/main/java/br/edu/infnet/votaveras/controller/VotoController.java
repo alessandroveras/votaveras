@@ -46,6 +46,7 @@ public class VotoController {
 	@GetMapping(value = "/votos")
 	public String telaLista(Model model) {
 		
+		model.addAttribute("eleicoes", eleicaoService.obterLista());
 		model.addAttribute("votos", votoService.obterLista());
 		
 		return "voto/lista";

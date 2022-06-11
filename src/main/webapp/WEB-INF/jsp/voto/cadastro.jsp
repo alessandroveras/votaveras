@@ -49,7 +49,7 @@
 
 			<div class="form-group">
 				<c:if test="${not empty eleicoes}">
-					<label>Eleicao:</label>
+					<label>Eleição:</label>
 					<select class="form-control" name="idEleicao">
 						<c:forEach var="eleicao" items="${eleicoes}">
 							<option value="${eleicao.id}">${eleicao.descricao}</option>
@@ -59,7 +59,7 @@
 
 				<c:if test="${empty eleicoes}">
 					<c:set var="botao" value="disabled" />
-					<label>Não existem eleicoes cadastrados!!!</label>
+					<label>Não existem eleições cadastradas!!!</label>
 				</c:if>
 			</div>
 
