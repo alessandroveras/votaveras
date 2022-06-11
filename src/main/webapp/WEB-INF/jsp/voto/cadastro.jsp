@@ -73,7 +73,7 @@
 					</select>
 				</c:if>
 
-				<c:if test="${empty eleicoes}">
+				<c:if test="${empty candidatos}">
 					<c:set var="botao" value="disabled" />
 					<label>Não existem candidatos cadastrados!!!</label>
 				</c:if>

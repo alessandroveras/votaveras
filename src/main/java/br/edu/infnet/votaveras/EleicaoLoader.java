@@ -18,7 +18,7 @@ public class EleicaoLoader implements ApplicationRunner {
 	public void run(ApplicationArguments args) throws Exception {
 
 		Eleicao eleicao = new Eleicao();
-		eleicao.setDescricao("Eleicao para prefeito");
+		eleicao.setDescricao("Eleicao para Prefeito");
 
 		try {
 			eleicaoService.incluir(eleicao);

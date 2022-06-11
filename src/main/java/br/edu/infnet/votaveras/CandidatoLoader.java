@@ -16,7 +16,7 @@ public class CandidatoLoader implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-
+		
 		Candidato candidato = new Candidato();
 		candidato.setNome("Alessandro Veras");
 		candidato.setNumero(21);
