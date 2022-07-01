@@ -5,29 +5,29 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.edu.infnet.votaveras.clients.EleitorClient;
 import br.edu.infnet.votaveras.model.domain.Eleitor;
-import br.edu.infnet.votaveras.model.repository.EleitorRepository;
 
 @Service
 public class EleitorService {
-	
+
 	@Autowired
-	private EleitorRepository eleitorRepository;
-	
-	public void incluir(Eleitor eleitor) {
-		eleitorRepository.save(eleitor);	
-	}
-	
-	public void excluir(Integer id) {
-		eleitorRepository.deleteById(id);
-	}
-	
-	public List<Eleitor> obterLista() {
-		return (List<Eleitor>) eleitorRepository.findAll();
-	}
-	
+	private EleitorClient eleitorClient;
+
 	public Eleitor obterPorId(Integer id) {
-		return eleitorRepository.findById(id).orElse(null);
+		return eleitorClient.obterPorId(id);
+	}
+
+	public List<Eleitor> obterLista() {
+		return eleitorClient.obterLista();
+	}
+
+	public void incluir(Eleitor eleitor) {
+		eleitorClient.incluir(eleitor);
+	}
+
+	public void excluir(Integer id) {
+		eleitorClient.excluir(id);
 	}
 
 }
